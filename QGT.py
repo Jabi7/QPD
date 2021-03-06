@@ -67,6 +67,8 @@ def payoff_plot(gamma, p, x, y):
     a, b = expected_payoff(p, psi)
     return a
 
+def HD_payoff_matrix(v, i, d):
+    return np.array([[(v - i)/2, v, 0, v/2 -d],[(v - i)/2, 0, v, v/2 -d]])
 
 def Psi_dense(J, Ua, Ub):
     rhoi = np.outer(CC,CC)
